@@ -37,10 +37,27 @@ public class Clase5 {
 
         System.out.println(Stringnum1 + " " + Stringnum1.getClass() + "\n" + Stringnum2 + " " + Stringnum2.getClass());
 
+        //4)Crea una función que reciba un nombre y retorne la inicial del mismo.
+        //Debe contar la cantidad de veces que se repite dicho carácter.
 
-
+        FuncionNombre("Salvador");
 
 
 
     }
+
+    public static void FuncionNombre(String nombre) {
+        char inicial = nombre.charAt(0);
+        int contLetra = 0;
+
+        for (int i = 0; i < nombre.length(); i++) {
+            if(nombre.charAt(i) == inicial)
+                contLetra ++;
+        }
+
+        System.out.println(inicial);
+        System.out.println("hay " + contLetra + " letras " +inicial);
+
+    }
+
 }
