@@ -2,42 +2,29 @@ package entity;
 
 public class Clase3 {
     public static void main(String[] args) {
-        //Vamos a crear nuestras primeras variables en Java. En este caso serán cuatro:
-        //nombre del trayecto, nombre del módulo, carga horaria(150) y tiempo de
-        //clase(3.2). Asignaremos un valor acorde a su tipo y se visualizará por consola.
+        //2)Escribir una función que evalúe si un estudiante cumple con los requisitos para promocionar y defina un
+        // mensaje personalizado para cada caso. El estudiante debe contar con al menos el 80% de asistencia, haber
+        // presentado los trabajos y obtener una notamayor o igual a seis en el examen final.
 
-        String NombreTrayecto = "Programador";
-        String Modulo = "Programacion Orientada a Objetos";
+    requisitos(4,2,8);
+
+
+    }
+
+    public static void requisitos(int faltas,int trabajos,int NotaExamenFinal){
+
         int CargaHoraria = 150;
         double TiempoClase = 3.2;
+        int TotalTrabajos = 6;
 
-        //Imprimí por consola la información del curso.
+        int TotalClases = (int) (CargaHoraria/TiempoClase);
 
-        System.out.println("Nombre del Trayecto: "+NombreTrayecto + "\n" +
-                            "Modulo: " + Modulo + "\n"+
-                            "Carga Horaria: " + CargaHoraria + "\n" +
-                            "Tiempo de Clase: " + TiempoClase + "\n");
-
-        //Necesitamos saber cuantas clases tendría este módulo. A continuación, declara una
-        //variable de tipo double para guardar el resultado. Imprimirlo como número entero.
-
-        double CantClases = CargaHoraria/TiempoClase;
-
-        System.out.println(Math.round(CantClases));
-
-        //Definir un número entero y asignarle un valor. Utiliza una estructura if para
-        //comprobar si es un número impar y menor a la cantidad de clases.
-
-        int num = 3;
-
-        // VV|VF|FV|FF
-        if (num%2 != 0 && num <= CantClases){
-            System.out.println("El numero es impar y menor a la cantidad de clases.");
-        }else{
-            System.out.println("a");
-        }
+        int asistencias = TotalClases*80/100;
 
 
 
     }
+
+
+
 }
