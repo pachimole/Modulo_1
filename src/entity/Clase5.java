@@ -42,22 +42,53 @@ public class Clase5 {
 
         FuncionNombre("Salvador");
 
+        //5)Crear una función que reciba un int, lo convierta a String y
+        // compare con otro String en caso de ser iguales debe incluirse un mensaje.
+
+        converString(5);
+
+
+        //6)Crear una función que reciba un String y un número, y
+        // devuelva la letra que está en esa posición, junto con el largo total.
+
+        StringYNum("Salvador",2);
+
+
 
 
     }
-
-    public static void FuncionNombre(String nombre) {
+    //4)
+    public static char FuncionNombre(String nombre) {
         char inicial = nombre.charAt(0);
         int contLetra = 0;
 
         for (int i = 0; i < nombre.length(); i++) {
-            if(nombre.charAt(i) == inicial)
-                contLetra ++;
+            if (nombre.charAt(i) == inicial)
+                contLetra++;
         }
 
         System.out.println(inicial);
-        System.out.println("hay " + contLetra + " letras " +inicial);
-
+        System.out.println("hay " + contLetra + " letras " + inicial);
+        return inicial;
     }
+    //5)
+    public static void converString(int num) {
+        String stringnum = String.valueOf(num);
+        String string2 = "5";
+        if (stringnum.equals(string2)) System.out.println("Los textos son identicos.");
+    }
+
+    //6)
+    public static void StringYNum (String Nombre,int num) {
+        if (num > Nombre.length()) System.out.println("El numero es mayor a la cantidad de letras.");
+        else if(num<0) System.out.println("El numero es negativo.");
+        else System.out.println("La letra en la posicion "+num+" es la: "+Nombre.charAt(num)+"\nEl nombre tiene "+Nombre.length()+" Letras.");
+    }
+
+
+
+
+
+
 
 }
