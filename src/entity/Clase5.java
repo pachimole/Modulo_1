@@ -63,7 +63,8 @@ public class Clase5 {
         int contLetra = 0;
 
         for (int i = 0; i < nombre.length(); i++) {
-            if (nombre.charAt(i) == inicial)
+            if (nombre.charAt(i) == inicial
+            )
                 contLetra++;
         }
 

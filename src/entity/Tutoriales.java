@@ -47,19 +47,29 @@ public class Tutoriales {
         String saludo = "Hola"
         String saludo2 = "HOLA"
 
-        saludo.length() --> cuenta los caracteres
+        saludo.length() -git -> cuenta los caracteres
         saludo.equals(saludo2)  --> compara los dos textos
         saludo.toUpperCase() --> convierte el texto en MAYUSCULAS
         saludo.charAT(2) --> muestra el caracter en la posicion 2: 'o'
-        saludo.CompareTO()--> ordena los caracteres es Unicode(codigo de valor numerico)
+        saludo.CompareTO()--> ordena los caracteres es Unicode(codigo de valor numerico)(para ordenar numeros es muy bueno)
         saludo.getClass --> muestra que tipo es (int,double, etc...)
-        .compareTo()-->
+
 
 
 
         //FUNCIONES (se escriben por fuera del metodo public static void main)
 
         public static void "nombredeclase"("dato a recibir2" "nombredeclase2" ){}
+
+        //RECORRER ARRAY
+        String[] comidas = {"pizza","papa","hamburguesa","cebolla"};
+        for(String elementos:comidas){
+            System.out.println(elementos);
+
+        Arrays.Sort()-->Orden alfabetico
+
+        //INGRESAR VALOR POR CONSOLA
+        Scanner scanner = new
 
 
 
