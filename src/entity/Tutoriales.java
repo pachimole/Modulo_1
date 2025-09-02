@@ -46,14 +46,15 @@ public class Tutoriales {
         //METODOS
         String saludo = "Hola"
         String saludo2 = "HOLA"
+        String saludo3 = "Hola,nene"
 
         saludo.length() -git -> cuenta los caracteres
-        saludo.equals(saludo2)  --> compara los dos textos
+        saludo.equals(saludo2)  --> compara los dos textos --> Retorna un Boolean
         saludo.toUpperCase() --> convierte el texto en MAYUSCULAS
         saludo.charAT(2) --> muestra el caracter en la posicion 2: 'o'
         saludo.CompareTO()--> ordena los caracteres es Unicode(codigo de valor numerico)(para ordenar numeros es muy bueno)
         saludo.getClass --> muestra que tipo es (int,double, etc...)
-
+        saludo3.split(",") --> separa el String dependiendo de lo que se pone en el parentesis
 
 
 

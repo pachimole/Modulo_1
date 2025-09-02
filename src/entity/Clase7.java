@@ -54,16 +54,11 @@ public class Clase7 {
         int numero3 = scanner.nextInt();
 
         int[] Notas = {numero1, numero2, numero3};
-        Arrays.sort(Notas);
-
-        System.out.println(Notas);
-        for (int Nota:Notas){
-            System.out.println(Nota);
-        }
+        Arrays.sort(Notas); //Ordena la lista de mayor a menor
 
         int promedio = (numero1 + numero2 + numero3)/3;
 
-        System.out.println("promedio: " +promedio+ "\nNumero Menor: " + Notas[0]+ "\nNumero Mayor: "+ Notas[Notas.length]);
+        System.out.println("promedio: " +promedio+ "\nNumero Menor: " + Notas[0]+ "\nNumero Mayor: "+ Notas[2]);
 
     }
 }
