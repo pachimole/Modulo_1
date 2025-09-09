@@ -54,7 +54,7 @@ public class Clase7 {
         int numero3 = scanner.nextInt();
 
         int[] Notas = {numero1, numero2, numero3};
-        Arrays.sort(Notas); //Ordena la lista de mayor a menor
+        Arrays.sort(Notas); //Ordena la lista de menor a mayor
 
         int promedio = (numero1 + numero2 + numero3)/3;
 

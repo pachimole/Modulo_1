@@ -5,12 +5,19 @@ import java.util.Scanner;
 
 public class Clase8 {
     public static void main(String[] args) {
-        //Necesitamos una función que reciba dos cadenas
-        // de texto, cada una debe tener dos lugares turisticos separadas por una coma.
+
+
+
+        //Necesitamos una función similar a la de la diapositiva anterior pero
+        // que en cada cadena de texto tenga dos lugares turísticos separados por una coma.
+
+        // → Texto de la diapositiva anterior: “Necesitamos una función que reciba dos cadenas
+        // de texto, cada una debe tener dos películas separadas por una coma.
 
         //1)Utilizar Scanner.
         //2)Debe retornar la que tenga mayor cantidad de caracteres.
         //3)Debe generar un array de cuatro elementos para guardar las cuatro lugares turisticos, ordenarlas e imprimirlas.”
+
 
         Scanner scanner = new Scanner(System.in);
 
@@ -21,15 +28,11 @@ public class Clase8 {
 
         LugaresTuristicos (lugarTuristico1,lugarTuristico2);
 
-
-
     }
 
     public static String LugaresTuristicos (String lugarTuristico1, String lugarTuristico2){
 
         String[] lugaresIngresados= new String[4];
-
-
 
         String[] lugaresSeparados1= lugarTuristico1.split(",");
         String[] lugaresSeparados2= lugarTuristico2.split(",");
@@ -57,4 +60,3 @@ public class Clase8 {
     }
 
 }
-
