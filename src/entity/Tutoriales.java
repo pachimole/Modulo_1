@@ -22,12 +22,19 @@ public class Tutoriales {
         double n1 = 2.3;
         int n1E = (int)n1; --> "2.3"
 
+        (int a texto)
+        int num= 123
+        Integer,toString(num); --> convierte el int a String
+
         /PARSEO (convertir una cadena de texto a int)
         String numTexto = "123"
 
         Integer.valueOF(numTexto); --> Devuelve un Int clase
                     o
         Integer.poarseInt(numTexto); --> Devuelve un Int primitivo
+
+
+
 
 
 
@@ -55,7 +62,7 @@ public class Tutoriales {
         saludo.CompareTO()--> ordena los caracteres es Unicode(codigo de valor numerico)(para ordenar numeros es muy bueno)
         saludo.getClass --> muestra que tipo es (int,double, etc...)
         saludo3.split(",") --> separa el String dependiendo de lo que se pone en el parentesis
-
+        saludo,substring(1) --> "ola" --> muestra los caracteres a partir del numero elegido
 
 
         //FUNCIONES (se escriben por fuera del metodo public static void main)
@@ -73,7 +80,12 @@ public class Tutoriales {
         Scanner scanner = new
 
 
+        //CREAR OBJETO
 
+
+        this --> hace referencia a el objeto
+        get --> consultar
+        set --> modificar
 
 
 
@@ -85,7 +97,7 @@ public class Tutoriales {
         git status --> para ver que archivos, en rojo es que no estan guardados
 
         git branch --> ver en que rama estoy
-        git branch checkout -->
+        git checkout -->
 
         git add .
         git commit -m "Mensaje"
