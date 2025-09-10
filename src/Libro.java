@@ -10,7 +10,7 @@ public class Libro {
     private int codigo;
 
     //constructor
-    public Libro(String tituloLibro,String nombreAutor,int stockDisp,double precioCompra,double precioVenta,char sector,int codigo){
+    public Libro(String tituloLibro,String nombreAutor,int stockDisp,Double precioCompra,Double precioVenta,char sector,int codigo){
         this.titulo = tituloLibro;
         this.autor = nombreAutor;
         this.stock = stockDisp;
@@ -38,7 +38,7 @@ public class Libro {
     }
     /*----------------------------------------------------------------
     Consultar stok */
-    public Boolean hayStockDisponible(){
+    public boolean hayStockDisponible(){
         return stock > 0;
     }
     /*----------------------------------------------------------------
@@ -58,24 +58,36 @@ public class Libro {
     }
     /*----------------------------------------------------------------
     Consultar si tiene descuento */
-    public Boolean tieneDescuento(){
-        return this.sector == "C";
-    }
+    public boolean tieneDescuento(){ return this.sector == 'C';}
     /*----------------------------------------------------------------
     Consultar precio final  con/sin descuento */
     public Double calcularPrecioFinal(){
         if(tieneDescuento()){
             double descuentoDinero = this.precioVenta*0.10;
-            System.out.println("en $ el descuento es de "+descuentoDinero);
+            System.out.println("El descuento es de " + descuentoDinero);
             return this.precioVenta-descuentoDinero;
-        }else{
-            return this.precioVenta;
-        }
+        }else{ return this.precioVenta;}
+    }
+    /*----------------------------------------------------------------
+    Consultar ultimos digitos del codigo */
+    public String ultimosDigitosCodigo(){
+        String codigoATexto = Integer.toString(this.codigo);
+        String ultimosDigitos = codigoATexto.substring(4);
+
+        return ("****"+ultimosDigitos);
     }
 
-
-
-    //modificar
+    //MODIFICAR
+    /*----------------------------------------------------------------
+    Modificar Titulo */
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    /*----------------------------------------------------------------
+    Modificar Autor */
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
 
 
 
