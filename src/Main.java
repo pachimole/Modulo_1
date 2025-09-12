@@ -3,7 +3,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        Calculadora.adivinarNumero();
+        System.out.println(Calculadora.adivinarNumero());
 
     }
 

@@ -27,24 +27,19 @@ public class Calculadora {
     Scanner scanner= new Scanner(System.in);
     Double numeroIngresado = scanner.nextDouble();
     if (numeroIngresado.equals(numRedondeado)){
-        System.out.println("adivinaste, el numero era "+ numRedondeado);
-        return "";
+        return "Adivinaste, el numero era "+ numRedondeado;
     }else System.out.println("No adivinaste, vuelve a intentarlo:");
 //-----------------------------------------------------------------------SEGUNDO INTENTO
     numeroIngresado = scanner.nextDouble();
     if (numeroIngresado.equals(numRedondeado)){
-        System.out.println("adivinaste, el numero era "+ numRedondeado);
-        return "";
+        return "Adivinaste, el numero era "+ numRedondeado;
     }else System.out.println("No adivinaste, vuelve a intentarlo:");
 //-----------------------------------------------------------------------TERCER INTENTO
     numeroIngresado = scanner.nextDouble();
 
     if (numeroIngresado.equals(numRedondeado)){
-        System.out.println("adivinaste, el numero era "+ numRedondeado);
-        return "";
-    }else System.out.println("No adivinaste, el numero era "+ numRedondeado);
-    return "";
-
+        return "Adivinaste, el numero era "+ numRedondeado;
+    }else return "No adivinaste, el numero era "+ numRedondeado;
     }
 
     //Obtener el mínimo entre dos números ingresados
