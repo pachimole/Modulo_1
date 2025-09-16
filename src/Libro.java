@@ -54,6 +54,9 @@ public class Libro {
     /*----------------------------------------------------------------
     Consultar ganancia */
     public Double calcularGanancia(){
+        if(tieneDescuento()){
+            return precioVenta*90-precioCompra;
+        }
         return precioVenta-precioCompra;
     }
     /*----------------------------------------------------------------
@@ -88,8 +91,4 @@ public class Libro {
     public void setAutor(String autor) {
         this.autor = autor;
     }
-
-
-
-
 }
