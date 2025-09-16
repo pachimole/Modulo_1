@@ -8,6 +8,8 @@ public class Libro {
     private Double precioVenta;
     private char sector;
     private int codigo;
+    private static final Double COMISION = 0.05;
+    private static int stockMinimo = 5;
 
     //constructor
     public Libro(String tituloLibro,String nombreAutor,int stockDisp,Double precioCompra,Double precioVenta,char sector,int codigo){
@@ -39,8 +41,17 @@ public class Libro {
     /*----------------------------------------------------------------
     Consultar stok */
     public boolean hayStockDisponible(){
-        return stock > 0;
+        return this.stock > 0;
     }
+    /*----------------------------------------------------------------
+    Consultar cantidad stock*/
+    public int cuantoStockHay(){
+        if (stock<stockMinimo){
+            System.out.println("Stock Actual: " + stock +"\nStock minimo recomendable: " + stockMinimo);
+            return this.stock;
+        } return this.stock;
+    }
+
     /*----------------------------------------------------------------
     Consultar precio de compra */
     public Double consultarPrecioCompra(){
@@ -55,9 +66,9 @@ public class Libro {
     Consultar ganancia */
     public Double calcularGanancia(){
         if(tieneDescuento()){
-            return precioVenta*90-precioCompra;
+            return (precioVenta*90-precioCompra)-COMISION;
         }
-        return precioVenta-precioCompra;
+        return (precioVenta-precioCompra)-COMISION;
     }
     /*----------------------------------------------------------------
     Consultar si tiene descuento */
@@ -91,4 +102,15 @@ public class Libro {
     public void setAutor(String autor) {
         this.autor = autor;
     }
+
+    //----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 }

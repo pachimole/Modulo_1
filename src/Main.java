@@ -23,6 +23,10 @@ public class Main {
         //----------------------------------------------------------------
         //CONSULTAR PRECIO DE COMPRA
         System.out.println(libro1.consultarPrecioCompra());
+        //----------------------------------------------------------------
+        //CONSULTAR STOCK ACTUAL
+        libro1.cuantoStockHay();
+
 
         //----------------------------------------------------------------
         //AGREGAR DATOS A UNA LISTA
@@ -34,5 +38,15 @@ public class Main {
         for (int i = 0; i < libros.length; i++) {
             System.out.println(libros[i].getTitulo()+"\n"+libros[i].getAutor()+"\n"+libros[i].calcularPrecioFinal());
         }
+
+
+
+
+
+
+
+
+
+
     }
 }
