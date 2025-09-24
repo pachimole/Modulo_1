@@ -1,6 +1,6 @@
 import entity.BilleteraVirtual;
-
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     //---------------------------------------------------------------------------------------------
@@ -10,12 +10,15 @@ public class Main {
     //---------------------------------------------------------------------------------------------
     //agregar villeteras, con un limite de 5.
     public static void agregarBilletera (BilleteraVirtual billeteraVirtual){
-        if(billeteras.size() == 5){ //--> crea un limite de billeteras a agregar.
+        //--> crea un limite de billeteras a agregar.
+        if(billeteras.size() == 5){
             System.out.println("se paso el limite permitido. ");
-        }else if(billeteras.contains(billeteraVirtual)){  //--> verifica que la billetera no este registrada.
+        //--> verifica que la billetera no este registrada.
+        }else if(billeteras.contains(billeteraVirtual)){
             System.out.println("ya esta registrada en el sistema.");
+        //--> agrega la billetera
         }else{
-            billeteras.add(billeteraVirtual); //--> agrega la billetera
+            billeteras.add(billeteraVirtual);
             System.out.println("la Billetera "+ billeteraVirtual +" fue registrada.");
         }
     }
@@ -30,15 +33,17 @@ public class Main {
 
     //---------------------------------------------------------------------------------------------
     //consultar
-    public static void consultarBilletera(){
-        for (BilleteraVirtual billeteraVirtual:billeteras);
+    public static void consultarBilletera(BilleteraVirtual billetera1){
+        for (BilleteraVirtual c:billeteras){
+            System.out.println(c.toString());
+        }
     }
-
+    //---------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------
     public static void main(String[] args) {
 
-        BilleteraVirtual billetera1 = new BilleteraVirtual(12345678,"Salvador",42470074,3000.0);
-        BilleteraVirtual billetera2 = new BilleteraVirtual(87654321,"Pepito",12345678,5000.0);
+        BilleteraVirtual billetera1 = new BilleteraVirtual(12345678, "Salvador", 42470074, 3000.0);
+        BilleteraVirtual billetera2 = new BilleteraVirtual(87654321, "Pepito", 12345678, 5000.0);
 
         //Consultar num de cuenta
         System.out.println(billetera1.getNumCuenta());
@@ -53,13 +58,13 @@ public class Main {
         System.out.println(billetera1.recibirSaldo(100.0));
 
         //Transferir saldo
-        System.out.println(billetera1.transferirSaldo(1000.0,87654321));
+        System.out.println(billetera1.transferirSaldo(1000.0, 87654321));
 
         //Ver limite de extraccion
         System.out.println(billetera1.getLimiteExtraccion());
 
         //cambiar limite de extraccion
-
+        BilleteraVirtual.setLimiteExtraccion(20000.0);
 
         //---------------------------------------------------------------------------------------------
         //agregar cuentas a ArrayList
@@ -67,7 +72,43 @@ public class Main {
         agregarBilletera(billetera1);
         agregarBilletera(billetera2);
 
+        //consultar billeteras
 
+        consultarBilletera(billetera1);
+
+        agregarCuenta();
+
+    }
+
+    //-----------------------------------------------------------------------------------------------
+    public static void agregarCuenta() {
+
+        Boolean cargar= true;
+        Scanner scanner = new Scanner(System.in);
+
+        while(cargar) {
+            System.out.println("Ingrese numero de cuenta: ");
+            Integer numCuenta = scanner.nextInt();
+            System.out.println("Ingrese nombre: ");
+            scanner.nextLine();
+            String nombre = scanner.nextLine();
+            System.out.println("Ingrese DNI: ");
+            Integer dni = scanner.nextInt();
+            System.out.println("Ingrese saldo: ");
+            Double saldo = scanner.nextDouble();
+            System.out.println("Billetera agregada exitosamente. ");
+
+            BilleteraVirtual nuevaBilletera = new BilleteraVirtual(numCuenta, nombre, dni, saldo);
+
+            agregarBilletera(nuevaBilletera); //Agregar cuenta a Array
+            System.out.println("desea agregar otra Billetera? ");
+            cargar = scanner.nextBoolean();
+            scanner.nextLine();
+        }
+        System.out.println("cuentas creadas: ");
+        for (int i = 0; i < billeteras.size(); i++) {
+            System.out.println(billeteras.get(i).toString());
+        }
     }
 
 }

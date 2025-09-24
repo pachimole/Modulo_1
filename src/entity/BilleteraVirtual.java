@@ -10,7 +10,7 @@ public class BilleteraVirtual {
     private static Double limiteExtraccion= 50000.0;
 
     //-----------------------------------------------------------------------------------------------
-    //Constructor
+    //CONSTRUCTOR
     public BilleteraVirtual ( Integer numCuenta, String nombre, Integer dni, Double saldo){
         this.numCuenta=numCuenta;
         this.nombre=nombre;
@@ -60,6 +60,24 @@ public class BilleteraVirtual {
     public static void setLimiteExtraccion(Double nuevoLimite){
         limiteExtraccion = nuevoLimite;
     }
+
+    //-----------------------------------------------------------------------------------------------
+    //cambio toString
+    @Override
+    public String toString() {
+        return "BilleteraVirtual{" +
+                "numCuenta=" + numCuenta +
+                ", nombre='" + nombre + '\'' +
+                ", dni=" + dni +
+                ", saldo=" + saldo +
+                '}';
+    }
+
+    //-----------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
