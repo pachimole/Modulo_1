@@ -1,6 +1,4 @@
-package entity;
-
-import java.lang.runtime.SwitchBootstraps;
+package entity.Clases;
 
 public class Clase1 {
 

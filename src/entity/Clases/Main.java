@@ -1,4 +1,5 @@
-import entity.BilleteraVirtual;
+package entity.Clases;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -38,6 +39,15 @@ public class Main {
             System.out.println(c.toString());
         }
     }
+
+    //-----------------------------------------------------------------------------------------------
+    //Crear otro método que permita buscar los datos
+    //de una cuenta ingresando el dni y consultar si
+    //se quiere actualizar el saldo, ingresar el
+    //nuevo valor en caso de que se confirme.
+
+
+
     //---------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------
     public static void main(String[] args) {

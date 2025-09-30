@@ -1,4 +1,4 @@
-package entity;
+package entity.Clases;
 
 public class BilleteraVirtual {
 
@@ -31,6 +31,8 @@ public class BilleteraVirtual {
     public Double saldoActual(){
         return this.saldo;
     }
+
+    public Integer consultarDni(){ return this.dni; }
 
     //-----------------------------------------------------------------------------------------------
     //retirar saldo
@@ -73,7 +75,6 @@ public class BilleteraVirtual {
                 '}';
     }
 
-    //-----------------------------------------------------------------------------------------------
 
 
 

@@ -1,4 +1,4 @@
-package entity;
+package entity.Clases;
 
 import java.util.Arrays;
 import java.util.Scanner;

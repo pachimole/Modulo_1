@@ -1,4 +1,4 @@
-package entity;
+package entity.Clases;
 
 public class Tutoriales {
     public static void main(String[] args) {
