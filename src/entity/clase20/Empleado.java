@@ -30,4 +30,7 @@ public class Empleado {
                 ", sueldoBase=" + sueldoBase +
                 '}';
     }
+    //Crear una primera instancia de la clase padre para practicar
+    //casting utilizando los métodos específicos de las clases hijas.
+
 }

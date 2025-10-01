@@ -56,7 +56,6 @@ public class Clase8 {
        }else{
            return lugarTuristico2;
        }
-
     }
 
 }
