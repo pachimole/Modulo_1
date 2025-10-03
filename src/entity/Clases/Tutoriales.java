@@ -74,6 +74,9 @@ public class Tutoriales {
         for(String elementos:comidas){
             System.out.println(elementos);
 
+        //VER SI HAY UN ELEMENTO EN LA LISTA
+        comidas.contens("papa")
+
         Arrays.Sort()-->Orden alfabetico
 
         //INGRESAR VALOR POR CONSOLA

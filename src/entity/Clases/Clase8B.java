@@ -9,7 +9,7 @@ public class Clase8B {
         //persona está habilitada a obtener uno en base a que el monto solicitado no supere el 35% de su sueldo.
 
         Scanner scanner = new Scanner(System.in);
-/*
+
         System.out.println("Ingrese monto solicitado: ");
         double monto = scanner.nextDouble();
 
@@ -33,7 +33,7 @@ public class Clase8B {
         Integer faltas = scanner.nextInt();
 
         System.out.println(calcularFaltas(clases,faltas));
-*/
+
         //3)En una jornada escolar se dictan varias materias.Todas tienen la misma duración en minutos.
         //Además, hay recreos de 15 minutos entre cada una. Si se dictan cierta cantidad de materias,
         //¿cuánto dura la jornada completa?

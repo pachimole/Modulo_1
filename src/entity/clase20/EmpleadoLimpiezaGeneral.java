@@ -21,6 +21,7 @@ public class EmpleadoLimpiezaGeneral extends Empleado{
         }
     }
     public Double calcularAdicionalHorasExtra(){
+        System.out.println("\nPrecio de horas extra: " + precioHorasExtra + "\nHoras extra realizadas: " + horasExtrasRealizadas + "\nTotal: " + precioHorasExtra * horasExtrasRealizadas);
         return precioHorasExtra * horasExtrasRealizadas;
     }
 
