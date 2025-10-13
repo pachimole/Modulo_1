@@ -9,11 +9,13 @@ public class Clase1 {
         // apellido,edad,peso y altura. Asignaremos un valor acorde a su tipo y se
         // visualizará por consola.
 
+        String nombreTrayecto = "Programacion Orientada a Objetos";
         String nombre = "salvador";
         String apellido = "Richard";
         int edad = 24;
         double peso = 73.0;
         double altura = 1.72;
+/*
 
         System.out.println("Nombre: " + nombre + "\n" + "Apellido: "+ apellido + "\n" + "Edad: " + edad + "\n" + "Peso: " + peso + "\n" + "Altura: " + altura);
 
@@ -88,34 +90,33 @@ public class Clase1 {
         }
 
         //8)Adapta el punto 6 de la práctica en vivo utilizando el nombre, buscando todas las vocales.
-
-        /*
+*/
         int contador_letras = 0;
 
         while (contador_letras <= nombre.length()){
 
             switch (contador_letras){
-                case "a":
+                case 'a':
                     System.out.println((char) nombre.length());
                 break;
-                case "e":
+                case 'e':
                     System.out.println((char) nombre.length());
                 break;
-                case "i":
+                case 'i':
                     System.out.println((char) nombre.length());
                 break;
-                case "o":
+                case 'o':
                     System.out.println((char) nombre.length());
                 break;
-                case "u":
+                case 'u':
                     System.out.println((char) nombre.length());
                 break;
                 default:
                     System.out.println("_");
             }
         contador_letras++;
+
         }
-        */
 
     }
 }
