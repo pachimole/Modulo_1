@@ -34,10 +34,6 @@ public class Tutoriales {
         Integer.poarseInt(numTexto); --> Devuelve un Int primitivo
 
 
-
-
-
-
         //CLASES (Todas las clases empiezan con MAYUSCULAS)
         -String = cadena de texto
         -Boolean =
