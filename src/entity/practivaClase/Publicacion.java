@@ -14,6 +14,25 @@ public class Publicacion {
     }
 
     //------------------------------------------------------------------------------------------------------------------
+    //Get
+    protected String getNombrePublicacion() {
+        return nombrePublicacion;
+    }
+
+    //------------------------------------------------------------------------------------------------------------------
+    //Set
+    protected String setNombrePublicacion(String nuevoNombre){
+        nombrePublicacion = nuevoNombre;
+        return nombrePublicacion;
+    }
+
+    //------------------------------------------------------------------------------------------------------------------
+    //equals
+
+
+
+
+
 
 
     // geter, setters, toString, equals

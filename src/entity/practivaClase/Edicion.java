@@ -4,12 +4,12 @@ import java.time.LocalDate;
 public class Edicion{
 
     private Integer numEdicion;
-    private LocalDate fechaPublicacion;
+    private int fechaPublicacion;
     private Double precioBase;
     private static final Double COMISION = 0.10;
 
 
-    public Edicion(Integer numEdicion, LocalDate fechaPublicacion, Double precioBase) {
+    public Edicion(Integer numEdicion, int fechaPublicacion, Double precioBase) {
         this.numEdicion = numEdicion;
         this.fechaPublicacion = fechaPublicacion;
         this.precioBase = precioBase;
@@ -23,5 +23,18 @@ public class Edicion{
 
         return  precioFinal;
     }
+
+    //------------------------------------------------------------------------------------------------------------------
+    //Get
+
+    public Double getPrecioBase(){return precioBase;}
+
+    //Set
+
+    public Double setPrecioBase(Double nuevoPrecioBase){
+        precioBase = nuevoPrecioBase;
+        return precioBase;
+    }
+
 
 }
