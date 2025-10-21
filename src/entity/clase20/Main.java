@@ -1,13 +1,15 @@
 package entity.clase20;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
 
-        EmpleadoLimpiezaGeneral empleado1 = new EmpleadoLimpiezaGeneral("Roberto",1234,8);
-        EmpleadoLimpiezaGeneral empleado2 = new EmpleadoLimpiezaGeneral("El Sapo",5678,2);
-        EmpleadoLimpiezaGeneral empleado3 = new EmpleadoLimpiezaGeneral("Pepiyo Griyo",91011,2);
+        EmpleadoLimpiezaGeneral empleado1 = new EmpleadoLimpiezaGeneral("Roberto",1234,2000.0,1);
+        EmpleadoLimpiezaGeneral empleado2 = new EmpleadoLimpiezaGeneral("El Sapo",5678,3000.0,2);
+        EmpleadoLimpiezaGeneral empleado3 = new EmpleadoLimpiezaGeneral("Pepiyo Griyo",91011,1000.0,0);
+
         EmpleadoLavaVajillas empleado4 = new EmpleadoLavaVajillas("Pou", 4521,1000.0,2);
 
         //crear arrayList
@@ -23,11 +25,24 @@ public class Main {
 
         empleado1.calcularAdicionalHorasExtra();
 
+        empleado1.calcularSueldo();
 
+        empleado4.calcularSueldo();
 
+        //ver si un empleado esta en la lista
 
+        verificarEmpleado(empleados, empleado1);
 
+        //ver informacion de empleado
+        System.out.println(empleado1);
 
 
     }
+
+    //ver si un empleado esta en la lista
+    public static void verificarEmpleado ( ArrayList <Empleado> lista, Empleado empleadoX){
+        System.out.println(lista.contains(empleadoX));
+    }
+
+
 }

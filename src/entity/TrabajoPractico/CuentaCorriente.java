@@ -8,20 +8,19 @@ public class CuentaCorriente extends Cuenta{
     public CuentaCorriente(Double saldoActual, Integer numUnico) {
         super(saldoActual, numUnico);
     }
-
+/*
     //------------------------------------------------------------------------------------------------------------------
 
     public void depositarCheque (Cheque cheque){
         System.out.println("Cheque depositado con exito");
     }
 
-    /*public Double extraerSaldoCuentaCorriente (Double saldo){
+    public Double extraerSaldoCuentaCorriente (Double saldo){
         if (saldo >= limiteMinimo || saldo <= setSaldoActual()+MONTO_DESCUBIERTO) {
 
         }else { extraerSaldo(saldo) ;}
         return saldo;
     }
-*/
 
     @Override
     public Double extraerSaldo(Double saldo) {
@@ -37,4 +36,6 @@ public class CuentaCorriente extends Cuenta{
 
         return super.extraerSaldo(saldo);
     }
+
+    */
 }
