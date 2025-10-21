@@ -28,7 +28,7 @@ public class EmpleadoLavaVajillas extends Empleado{
     @Override
     public Double calcularSueldo(){
         System.out.println("El sueldo de " + getNombre() + " es de: " + (getSueldoBase() - calcularDescuentoVajillaRota()) + "\n");
-        return this.getSueldoBase() - calcularDescuentoVajillaRota();
+        return (this.getSueldoBase() - calcularDescuentoVajillaRota());
     }
 
 

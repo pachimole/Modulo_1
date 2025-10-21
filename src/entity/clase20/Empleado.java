@@ -2,7 +2,7 @@ package entity.clase20;
 
 import java.util.Objects;
 
-public class Empleado {
+public abstract class Empleado {
     private String nombre;
     private Integer dni;
     private Double sueldoBase;
@@ -14,9 +14,7 @@ public class Empleado {
     }
 
     //------------------------------------------------------------------------------------------------------------------
-    public Double calcularSueldo(){
-        return this.sueldoBase;
-    }
+    public abstract Double calcularSueldo();
 
     protected Double getSueldoBase() {
         return sueldoBase;
