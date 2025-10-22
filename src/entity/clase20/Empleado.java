@@ -1,5 +1,7 @@
 package entity.clase20;
 
+import java.util.Objects;
+
 public class Empleado {
     private String nombre;
     private Integer dni;
@@ -10,10 +12,8 @@ public class Empleado {
         this.dni=dni;
         this.sueldoBase=sueldoBase;
     }
-    public Empleado(String nombre, Integer dni){
-        this.nombre = nombre;
-        this.dni = dni;
-    }
+
+    //------------------------------------------------------------------------------------------------------------------
     public Double calcularSueldo(){
         return this.sueldoBase;
     }
@@ -22,18 +22,46 @@ public class Empleado {
         return sueldoBase;
     }
 
+    protected String getNombre(){ return nombre;}
+
+    //------------------------------------------------------------------------------------------------------------------
+    //toString
     @Override
     public String toString() {
         return "Empleado{" +
                 "nombre='" + nombre + '\'' +
                 ", dni=" + dni +
                 ", sueldoBase=" + sueldoBase +
+                ", hashCode=" + hashCode() +
                 '}';
     }
 
+    //hashcode
+    @Override
+    public int hashCode(){
+
+        return Objects.hash(nombre,dni);
+    }
+
+    //equals
+    @Override
+    public boolean equals (Object o){
+        if (o == null || this.getClass() != o.getClass()){
+            return false;
+        }
+        //Casting
+        Empleado empleadoTrasformado = (Empleado) o;
+        return Objects.equals(empleadoTrasformado.dni, this.dni );
+
+    }
+
+    //------------------------------------------------------------------------------------------------------------------
     //metodo == en todas las instancias
     public final void registrarse(){
         System.out.println("registrarse. ");
     }
+
+    //------------------------------------------------------------------------------------------------------------------
+
 
 }

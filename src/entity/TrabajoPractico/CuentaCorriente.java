@@ -19,8 +19,17 @@ public class CuentaCorriente extends Cuenta {
     }
 
 
+
     //------------------------------------------------------------------------------------------------------------------
     //OVERRIDE
+
+    public Double extraerSaldoCuentaCorriente (Double saldo){
+        if (saldo >= limiteMinimo || saldo <= getSaldoActual()+MONTO_DESCUBIERTO) {
+
+        }else { extraerSaldo(saldo) ;}
+        return saldo;
+    }
+
 
     @Override
     public void extraerSaldo(Double saldo) {
@@ -42,4 +51,6 @@ public class CuentaCorriente extends Cuenta {
                 ", SaldoActual= " + getSaldoActual() +
                 '}';
     }
+
+
 }

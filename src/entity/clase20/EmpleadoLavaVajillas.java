@@ -11,6 +11,7 @@ public class EmpleadoLavaVajillas extends Empleado{
         this.contadorVajillaRota = contadorVajillaRota;
     }
 
+    //------------------------------------------------------------------------------------------------------------------
     public void actualizarCantidadVajillaRota(Integer nuevasVajillasRotas){
         this.contadorVajillaRota = contadorVajillaRota + nuevasVajillasRotas;
     }
@@ -23,8 +24,10 @@ public class EmpleadoLavaVajillas extends Empleado{
         }
     }
 
+    //------------------------------------------------------------------------------------------------------------------
     @Override
     public Double calcularSueldo(){
+        System.out.println("El sueldo de " + getNombre() + " es de: " + (getSueldoBase() - calcularDescuentoVajillaRota()) + "\n");
         return this.getSueldoBase() - calcularDescuentoVajillaRota();
     }
 
