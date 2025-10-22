@@ -1,40 +1,45 @@
 package entity.TrabajoPractico;
 
-public class CuentaCorriente extends Cuenta{
+public class CuentaCorriente extends Cuenta {
 
     private final Double MONTO_DESCUBIERTO = 70000.0;
     private Double limiteMinimo = 30000.0;
+    private Double extraer;
 
     public CuentaCorriente(Double saldoActual, Integer numUnico) {
         super(saldoActual, numUnico);
     }
 
     //------------------------------------------------------------------------------------------------------------------
+    //CONSULTAS
 
-    public void depositarCheque (Cheque cheque){
-        System.out.println("Cheque depositado con exito");
+    public void depositarCheque(Cheque cheque) {
+        setSaldoActual(getSaldoActual() + cheque.getMonto());
+        System.out.println("Cheque depositado con exito, saldo actual: " + getSaldoActual());
     }
 
-    /*public Double extraerSaldoCuentaCorriente (Double saldo){
-        if (saldo >= limiteMinimo || saldo <= setSaldoActual()+MONTO_DESCUBIERTO) {
 
-        }else { extraerSaldo(saldo) ;}
-        return saldo;
-    }
-*/
+    //------------------------------------------------------------------------------------------------------------------
+    //OVERRIDE
 
     @Override
-    public Double extraerSaldo(Double saldo) {
-        if (saldo <= getSaldoActual()){
-            setSaldoActual(getSaldoActual()-saldo);
-        }
+    public void extraerSaldo(Double saldo) {
+        if (saldo >= limiteMinimo && saldo <= getSaldoActual() + MONTO_DESCUBIERTO) {
+            if (saldo <= getSaldoActual()) {
+                setSaldoActual(getSaldoActual() - saldo); //actualizo saldo actual (queda en saldo positivo)
+                System.out.println("saldo extraido con exito, saldo actual: " + getSaldoActual());
+            } else { setSaldoActual((getSaldoActual()-saldo)); //actualizo saldo actual (queda en saldo negativo)
+                System.out.println("saldo extraido con exito, saldo actual: " + getSaldoActual());
+            }
 
-        }else if (saldo >= limiteMinimo || saldo <= getSaldoActual()+MONTO_DESCUBIERTO){
+        } else { System.out.println("saldo insuficiente"); }
+    }
 
-        Double saldoNegativo = getSaldoActual()+MONTO_DESCUBIERTO;
-        setSaldoActual(getSaldoActual());
-
-
-        return super.extraerSaldo(saldo);
+    @Override
+    public String toString() {
+        return "CuentaCorriente{" +
+                "NumUnico= " + getNumUnico() +
+                ", SaldoActual= " + getSaldoActual() +
+                '}';
     }
 }

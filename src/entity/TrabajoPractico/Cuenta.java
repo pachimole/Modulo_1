@@ -1,8 +1,13 @@
 package entity.TrabajoPractico;
 
+import java.util.Objects;
+
 public class Cuenta {
 
-    private Integer numUnico;
+    //------------------------------------------------------------------------------------------------------------------
+    //CONSTRUCTOR
+
+    private final Integer numUnico;
     private Double saldoActual;
 
     public Cuenta(Double saldoActual, Integer numUnico) {
@@ -11,25 +16,52 @@ public class Cuenta {
     }
 
     //------------------------------------------------------------------------------------------------------------------
+    //CONSULTAS
+
     public Double getSaldoActual() {
         return saldoActual;
     }
 
-    public Double setSaldoActual(Double saldo) {
+    public void setSaldoActual(Double saldo) {
         saldoActual = saldo;
-        return saldoActual;
     }
 
-    public Double depositarSaldo(Double saldo) {
+    public Integer getNumUnico(){
+        return numUnico;
+    }
+
+    public void depositarSaldo(Double saldo) {
         saldoActual = saldoActual + saldo;
-        return saldo;
     }
 
-    public Double extraerSaldo(Double saldo) {
+    public void extraerSaldo(Double saldo) {
         if (saldo > saldoActual) {
             System.out.println("saldo insuficiente.");
         }else { saldoActual = saldoActual-saldo; }
-        return saldo;
+    }
+
+    //------------------------------------------------------------------------------------------------------------------
+    //OVERRIDE
+
+    @Override
+    public String toString() {
+        return "Cuenta{" +
+                "numUnico=" + numUnico +
+                ", saldoActual=" + saldoActual +
+                '}';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Cuenta cuenta = (Cuenta) o;
+        return Objects.equals(numUnico, cuenta.numUnico);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numUnico, saldoActual);
     }
 }
 

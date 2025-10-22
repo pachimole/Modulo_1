@@ -8,7 +8,15 @@ public class CajaDeAhorro extends Cuenta{
         super(saldoActual, numUnico);
     }
 
+    //------------------------------------------------------------------------------------------------------------------
+    //OVERRIDE
 
-
-
+    @Override
+    public String toString() {
+        return "CajaDeAhorro{" +
+                "NumUnico= " + getNumUnico() +
+                ", SaldoActual= " + getSaldoActual() +
+                ", TasaInteres= " + tasaInteres +
+                '}';
+    }
 }
