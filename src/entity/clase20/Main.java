@@ -1,7 +1,6 @@
 package entity.clase20;
 
-import java.util.ArrayList;
-import java.util.Objects;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,6 +35,12 @@ public class Main {
         //ver informacion de empleado
         System.out.println(empleado1);
 
+        System.out.println("Lista ordenada: ");Collections.sort(empleados);
+
+        for (Empleado e : empleados){
+            System.out.println(e);
+        }
+
 
     }
 
@@ -43,6 +48,8 @@ public class Main {
     public static void verificarEmpleado ( ArrayList <Empleado> lista, Empleado empleadoX){
         System.out.println(lista.contains(empleadoX));
     }
+
+
 
 
 }

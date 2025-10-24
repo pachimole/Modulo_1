@@ -2,7 +2,8 @@ package entity.clase20;
 
 import java.util.Objects;
 
-public abstract class Empleado {
+public abstract class Empleado implements Comparable<Empleado>{
+
     private String nombre;
     private Integer dni;
     private Double sueldoBase;
@@ -14,6 +15,7 @@ public abstract class Empleado {
     }
 
     //------------------------------------------------------------------------------------------------------------------
+    //Metodos
     public abstract Double calcularSueldo();
 
     protected Double getSueldoBase() {
@@ -62,4 +64,8 @@ public abstract class Empleado {
     //------------------------------------------------------------------------------------------------------------------
 
 
+    @Override
+    public int compareTo(Empleado o) {
+        return dni.compareTo(o.dni);
+    }
 }
