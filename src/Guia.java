@@ -13,4 +13,13 @@ public class Guia {
     public Integer getDni(){
         return dni;
     }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
 }

@@ -1,6 +1,4 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,7 +12,7 @@ public class Main {
     //------------------------------------------------------------
     //lista Paquetes
 
-    Set<Paquete> paquetesPremium = new HashSet<>();
+    List paquetesPremium = new ArrayList<>();
 
     paquetesPremium.add(paquetePremium1);
     paquetesPremium.add(paqueteSimple1);

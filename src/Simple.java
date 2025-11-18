@@ -11,23 +11,21 @@ public class Simple extends Paquete{
 
     //------------------------------------------------------------------------------------------------------------------
 
-//    public Boolean tieneCodigoDescuento(String tieneCodigo){
-//        if (tieneCodigo.toLowerCase() == "si"){
-//            return true;
-//        }else
-//            return false;
-//    }
-
     public String getTieneCodigoDescuento() {
         return tieneCodigoDescuento;
     }
 
-    public void calcularPrecioFinal(){
-        if (getTieneCodigoDescuento().toLowerCase() == "si"){
-            System.out.println("Descuento aplicado. El precio final es de: " + (getPrecioBase() + porcentajePorExcursion * excursiones.size() - descuentoAsociado) );
-        }else{
-            System.out.println("El precio final es de: " + (getPrecioBase() + porcentajePorExcursion * excursiones.size()));
+    @Override
+    public Double calcularPrecioFinal() {
 
+        Double adicional = getPrecioBase() * porcentajePorExcursion * excursiones.size();
+
+        if (getTieneCodigoDescuento().toLowerCase() == "si") {
+            System.out.println("Descuento aplicado. El precio final es de: " + (getPrecioBase() + adicional - descuentoAsociado));
+            return (getPrecioBase() + adicional - descuentoAsociado);
+        } else {
+            System.out.println("El precio final es de: " + (getPrecioBase() + adicional));
+            return (getPrecioBase() + adicional);
         }
     }
 

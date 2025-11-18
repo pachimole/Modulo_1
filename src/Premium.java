@@ -9,10 +9,13 @@ public class Premium extends Paquete{
         this.puntosExcursion = puntosExcursion;
     }
 
-    public void calcularPrecioFinal(){
-        Double precioFinal = getPrecioBase();
-        System.out.println("El precio final es de: " + (precioFinal + porcentajePorExcursion * excursiones.size()) +
-                "(Precio: " + precioFinal + " + totalexcursiones: " + excursiones.size() + ")");
+    @Override
+    public Double calcularPrecioFinal(){
+
+        Double adicional = getPrecioBase()*porcentajePorExcursion*excursiones.size();
+        System.out.println("El precio final es de: " + (getPrecioBase() + adicional) +
+                "(Precio: " + getPrecioBase() + " + totalexcursiones: " + excursiones.size() + ")");
+        return getPrecioBase() + adicional;
     }
 
 }
