@@ -10,6 +10,11 @@ public class Guia {
         this.numMatricula = numMatricula;
     }
 
+    //------------------------------------------------------------------------------------------------------------------
+    public void setDni(Integer dni) {
+        this.dni = dni;
+    }
+
     public Integer getDni(){
         return dni;
     }
@@ -22,4 +27,13 @@ public class Guia {
         return nombre;
     }
 
+    //------------------------------------------------------------------------------------------------------------------
+    @Override
+    public String toString() {
+        return "Guia{" +
+                "nombre='" + nombre + '\'' +
+                ", dni=" + dni +
+                ", numMatricula=" + numMatricula +
+                '}';
+    }
 }

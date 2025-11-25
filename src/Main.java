@@ -11,20 +11,40 @@ public class Main {
 
     //------------------------------------------------------------
     //lista Paquetes
+    List <Paquete> paquetes = new ArrayList<>();
 
-    List paquetesPremium = new ArrayList<>();
+    paquetes.add(paquetePremium1);
+    paquetes.add(paqueteSimple1);
 
-    paquetesPremium.add(paquetePremium1);
-    paquetesPremium.add(paqueteSimple1);
+    //recorrer lista
+    for (Paquete i : paquetes){
+        System.out.println(i);
+    }
+
+    //CompareTo
+    Collections.sort(paquetes);
+    for (Paquete p: paquetes){
+        System.out.println(p.getExcursiones() + " / $ " + p.calcularPrecioFinal());
+    }
 
     //------------------------------------------------------------
     //lista Guias
 
-    HashMap <Integer,Guia> guias = new HashMap<>();
+    Map <Integer,Guia> guias = new HashMap<>();
 
     guias.put(guia1.getDni(),guia1);
     guias.put(guia2.getDni(),guia1);
 
+    //buscar guia
+    guias.put(guia1.getDni(), guia1);
+    System.out.println(guias.get(guia1.getDni()));
+
+    //recorrer gias
+    for(Guia i: guias.values()){
+        System.out.println(i);
+    }
+
+    //------------------------------------------------------------
     paqueteSimple1.agregarExcursion("Peru");
     paqueteSimple1.agregarExcursion("Bolivia");
 

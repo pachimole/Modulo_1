@@ -29,4 +29,12 @@ public class Simple extends Paquete{
         }
     }
 
+    @Override
+    public String toString() {
+        return "Simple{" +
+                "descuentoAsociado=" + descuentoAsociado +
+                ", porcentajePorExcursion=" + porcentajePorExcursion +
+                ", tieneCodigoDescuento='" + tieneCodigoDescuento + '\'' +
+                '}';
+    }
 }

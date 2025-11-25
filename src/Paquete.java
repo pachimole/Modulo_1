@@ -1,6 +1,6 @@
 import java.util.*;
 
-public abstract class Paquete {
+public abstract class Paquete implements Comparable<Paquete> {
 
     private Integer identificador;
     private String titulo;
@@ -57,5 +57,21 @@ public abstract class Paquete {
     @Override
     public int hashCode() {
         return Objects.hashCode(titulo);
+    }
+
+    @Override
+    public String toString() {
+        return "Paquete{" +
+                "identificador=" + identificador +
+                ", titulo='" + titulo + '\'' +
+                ", precioBase=" + precioBase +
+                ", cantDias=" + cantDias +
+                ", excursiones=" + excursiones +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Paquete p){
+        return Double.compare(this.calcularPrecioFinal(), p.calcularPrecioFinal());
     }
 }

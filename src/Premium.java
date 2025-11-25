@@ -9,6 +9,17 @@ public class Premium extends Paquete{
         this.puntosExcursion = puntosExcursion;
     }
 
+    //------------------------------------------------------------------------------------------------------------------
+
+    public Integer getPuntosExcursion(){
+        return puntosExcursion;
+    }
+
+    public void setPuntosExcursion(Integer puntosExcursion) {
+        this.puntosExcursion = puntosExcursion;
+    }
+
+    //------------------------------------------------------------------------------------------------------------------
     @Override
     public Double calcularPrecioFinal(){
 
@@ -18,4 +29,12 @@ public class Premium extends Paquete{
         return getPrecioBase() + adicional;
     }
 
+    @Override
+    public String toString() {
+        return "Premium{" +
+                "puntosExcursion=" + puntosExcursion +
+                ", voucherDescuento='" + voucherDescuento + '\'' +
+                ", porcentajePorExcursion=" + porcentajePorExcursion +
+                '}';
+    }
 }
