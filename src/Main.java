@@ -3,11 +3,11 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-    Premium paquetePremium1 = new Premium(1,"Cataratas",1000.0,2,2);
-    Simple paqueteSimple1 = new Simple(2,"Peru",2000.0,5,"si");
-
     Guia guia1 = new Guia("Pepe",142567,1);
     Guia guia2 = new Guia("Raul",753424,2);
+
+    Premium paquetePremium1 = new Premium(1,"Cataratas",1000.0,2,2, guia2);
+    Simple paqueteSimple1 = new Simple(2,"Peru",2000.0,5,"si", guia1);
 
     //------------------------------------------------------------
     //lista Paquetes
@@ -22,10 +22,10 @@ public class Main {
     }
 
     //CompareTo
-    Collections.sort(paquetes);
-    for (Paquete p: paquetes){
-        System.out.println(p.getExcursiones() + " / $ " + p.calcularPrecioFinal());
-    }
+//    Collections.sort(paquetes);
+//    for (Paquete p: paquetes){
+//        System.out.println(p.getExcursiones() + " / $ " + p.calcularPrecioFinal());
+//    }
 
     //------------------------------------------------------------
     //lista Guias
@@ -43,6 +43,15 @@ public class Main {
     for(Guia i: guias.values()){
         System.out.println(i);
     }
+
+    // CompareTo() ordenar por precio
+    Collections.sort(paquetes);
+
+    for (Paquete p : paquetes){
+        System.out.println(p.getTitulo()+ "/ $" + p.calcularPrecioFinal());
+    }
+
+    paquetePremium1.calcularPrecioFinal();
 
     //------------------------------------------------------------
     paqueteSimple1.agregarExcursion("Peru");

@@ -4,8 +4,8 @@ public class Simple extends Paquete{
     private Double porcentajePorExcursion = 0.10;
     private String tieneCodigoDescuento;
 
-    public Simple(Integer identificador, String titulo, Double precioBase, Integer cantDias,String tieneCodigoDescuento) {
-        super(identificador, titulo, precioBase, cantDias);
+    public Simple(Integer identificador, String titulo, Double precioBase, Integer cantDias,String tieneCodigoDescuento,Guia guia) {
+        super(identificador, titulo, precioBase, cantDias, guia);
         this.tieneCodigoDescuento = tieneCodigoDescuento;
     }
 
@@ -21,8 +21,8 @@ public class Simple extends Paquete{
         Double adicional = getPrecioBase() * porcentajePorExcursion * excursiones.size();
 
         if (getTieneCodigoDescuento().toLowerCase() == "si") {
-            System.out.println("Descuento aplicado. El precio final es de: " + (getPrecioBase() + adicional - descuentoAsociado));
-            return (getPrecioBase() + adicional - descuentoAsociado);
+            System.out.println("Descuento aplicado. El precio final es de: " + (getPrecioBase() + adicional - (getPrecioBase()*descuentoAsociado)));
+            return (getPrecioBase() + adicional - (getPrecioBase()*descuentoAsociado));
         } else {
             System.out.println("El precio final es de: " + (getPrecioBase() + adicional));
             return (getPrecioBase() + adicional);
@@ -36,5 +36,10 @@ public class Simple extends Paquete{
                 ", porcentajePorExcursion=" + porcentajePorExcursion +
                 ", tieneCodigoDescuento='" + tieneCodigoDescuento + '\'' +
                 '}';
+    }
+
+    @Override
+    public String Personalizar(String titulo, Double precioBase, Integer cantDias, Guia guia) {
+        return "";
     }
 }

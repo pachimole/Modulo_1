@@ -1,22 +1,29 @@
 import java.util.*;
 
-public abstract class Paquete implements Comparable<Paquete> {
+public abstract class Paquete implements Comparable<Paquete>, Personalizable {
 
     private Integer identificador;
     private String titulo;
     private Double precioBase;
     private Integer cantDias;
     public Set <String> excursiones = new HashSet<>();
+    private Guia guia;
 
-    public Paquete(Integer identificador, String titulo, Double precioBase, Integer cantDias) {
+    public Paquete(Integer identificador, String titulo, Double precioBase, Integer cantDias, Guia guia) {
         this.identificador = identificador;
         this.titulo = titulo;
         this.precioBase = precioBase;
         this.cantDias = cantDias;
+        this.guia = guia;
     }
 
     //------------------------------------------------------------------------------------------------------------------
-    
+
+
+    public String getTitulo() {
+        return titulo;
+    }
+
     public Integer getExcursiones() {
         System.out.println("Nombre excursiones: ");
 

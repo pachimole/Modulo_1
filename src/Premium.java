@@ -1,11 +1,11 @@
-public class Premium extends Paquete{
+public class Premium extends Paquete implements Personalizable{
 
     private Integer puntosExcursion;
     private String voucherDescuento;
     private Double porcentajePorExcursion = 0.15;
 
-    public Premium(Integer identificador, String titulo, Double precioBase, Integer cantDias, Integer puntosExcursion) {
-        super(identificador, titulo, precioBase, cantDias);
+    public Premium(Integer identificador, String titulo, Double precioBase, Integer cantDias, Integer puntosExcursion, Guia guia) {
+        super(identificador, titulo, precioBase, cantDias, guia);
         this.puntosExcursion = puntosExcursion;
     }
 
@@ -37,4 +37,10 @@ public class Premium extends Paquete{
                 ", porcentajePorExcursion=" + porcentajePorExcursion +
                 '}';
     }
+
+    @Override
+    public String Personalizar(String titulo, Double precioBase, Integer cantDias, Guia guia) {
+        return titulo + " " + precioBase + " " + cantDias + " " + guia;
+    }
+
 }
