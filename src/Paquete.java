@@ -1,6 +1,6 @@
 import java.util.*;
 
-public abstract class Paquete implements Comparable<Paquete>, Personalizable {
+public abstract class Paquete implements Comparable<Paquete>{
 
     private Integer identificador;
     private String titulo;

@@ -38,8 +38,7 @@ public class Simple extends Paquete{
                 '}';
     }
 
-    @Override
-    public String Personalizar(String titulo, Double precioBase, Integer cantDias, Guia guia) {
-        return "";
-    }
+
+
+
 }

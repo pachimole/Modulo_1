@@ -21,12 +21,6 @@ public class Main {
         System.out.println(i);
     }
 
-    //CompareTo
-//    Collections.sort(paquetes);
-//    for (Paquete p: paquetes){
-//        System.out.println(p.getExcursiones() + " / $ " + p.calcularPrecioFinal());
-//    }
-
     //------------------------------------------------------------
     //lista Guias
 
@@ -61,10 +55,22 @@ public class Main {
 
     paqueteSimple1.eliminarExcursion("Peru");
 
-    //------------------------------------------------------------
-
     paqueteSimple1.calcularPrecioFinal();
 
+    //------------------------------------------------------------
+
+    //Visualizar informacion paquetes disponibles
+    Scanner scanner = new Scanner(System.in);
+
+    try{
+        System.out.println("Ingrese un index.");
+        Integer index = scanner.nextInt();
+        System.out.println( paquetes.get(index) );}
+    catch (IndexOutOfBoundsException | InputMismatchException e){
+        System.err.println(e);
+    }
+
+        System.out.println("El programa continua.");
 
     }
 }

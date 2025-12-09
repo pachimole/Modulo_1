@@ -43,4 +43,6 @@ public class Premium extends Paquete implements Personalizable{
         return titulo + " " + precioBase + " " + cantDias + " " + guia;
     }
 
+
+
 }
